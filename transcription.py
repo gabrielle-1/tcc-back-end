@@ -4,7 +4,8 @@ import os
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173"])# Permite CORS para todas as rotas
+# CORS(app, origins=["http://localhost:5173"])# Permite CORS para todas as rotas
+CORS(app, origins=["*"])  # Permite CORS para qualquer origem
 
 # Carregar o modelo Whisper (use "small" ou "medium" dependendo do desempenho desejado)
 modelo = whisper.load_model("small")
@@ -43,4 +44,5 @@ def transcribe_audio():
         return jsonify({"error": str(e)}), 400
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
+    # app.run(debug=True)
