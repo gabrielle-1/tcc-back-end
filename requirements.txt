@@ -1,7 +1,3 @@
 Flask==3.1.0
 flask-cors==5.0.1
-pandas==2.2.3
-transformers==4.21.1  # Atualizando para uma versão mais recente
-numpy==1.24  # Versão estável do NumPy
 scikit-learn==1.0.2
-torch==1.13.1  # Versão estável do PyTorch, compatível com a versão do NumPy
