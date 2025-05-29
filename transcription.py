@@ -4,7 +4,6 @@ import os
 from flask_cors import CORS
 
 app = Flask(__name__)
-# CORS(app, origins=["http://localhost:5173"])# Permite CORS para todas as rotas
 CORS(app, origins=["*"])  # Permite CORS para qualquer origem
 
 # Carregar o modelo Whisper (use "small" ou "medium" dependendo do desempenho desejado)
